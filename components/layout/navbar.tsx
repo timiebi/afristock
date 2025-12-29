@@ -1,23 +1,23 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { 
-  Menu, 
-  Upload, 
-  User, 
-  Settings, 
-  LogOut, 
-  LayoutDashboard, 
-  Heart, 
-  Camera 
+import { AnimatePresence, motion } from "framer-motion"
+import {
+    Camera,
+    Heart,
+    LayoutDashboard,
+    LogOut,
+    Menu,
+    Settings,
+    Upload,
+    User
 } from "lucide-react"
 import Link from "next/link"
-import { useEffect, useState, useRef } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { useRouter } from "next/navigation"
+import { useEffect, useRef, useState } from "react"
 import { GuestUploadModal } from "../gallery/guest-upload-modal"
 import { ModeToggle } from "../mode-toggle"
 import { NavbarSearch } from "./navBarSearch"
-import { useRouter } from "next/navigation"
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
